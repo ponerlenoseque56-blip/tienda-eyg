@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5"
+    android:gravity="center">
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resumen de Ganancias"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:id="@+id/txtGananciaEfectivo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="💵 Efectivo: $0.00"
+        android:textSize="20sp"
+        android:textColor="#2E7D32"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/txtGananciaTransf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="💳 Transferencia: $0.00"
+        android:textSize="20sp"
+        android:textColor="#1565C0"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+        
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nota: El dinero se reinicia al cerrar la app."
+        android:textSize="12sp"
+        android:textColor="#757575"
+        android:gravity="center" />
+</LinearLayout>

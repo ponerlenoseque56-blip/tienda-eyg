@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F8F9FA"
+    android:padding="12dp">
+
+    <!-- Tu Logo dentro de la App -->
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@drawable/logo_tienda"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="fitCenter" />
+
+    <!-- Botones de Pestañas -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+
+        <Button
+            android:id="@+id/btnTabVentas"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:text="Ventas"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:backgroundTint="#1976D2"
+            android:textColor="#FFFFFF"
+            android:layout_marginEnd="4dp" />
+
+        <Button
+            android:id="@+id/btnTabInventario"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:text="Inventario"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:backgroundTint="#757575"
+            android:textColor="#FFFFFF"
+            android:layout_marginEnd="4dp" />
+
+        <Button
+            android:id="@+id/btnTabGanancias"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:text="Ganancias"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:backgroundTint="#757575"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <!-- PANTALLA 1: VENTAS (Ahora en Cuadrícula) -->
+    <LinearLayout
+        android:id="@+id/pantallaVentas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/txtCajaEfectivo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💵 Efectivo: $0.00"
+            android:textSize="14sp"
+            android:textColor="#2E7D32"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="2dp"/>
+
+        <TextView
+            android:id="@+id/txtCajaTransf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💳 Transferencia: $0.00"
+            android:textSize="14sp"
+            android:textColor="#1565C0"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/editBuscar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="🔍 Buscar producto..."
+            android:textColor="#212529"
+            android:textSize="14sp"
+            android:background="#FFFFFF"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:elevation="2dp"
+            android:layout_marginBottom="8dp"
+            android:inputType="text" />
+
+        <!-- Cuadrícula de Ventas (3 columnas) -->
+        <GridView
+            android:id="@+id/gridVentas"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:numColumns="3"
+            android:horizontalSpacing="6dp"
+            android:verticalSpacing="6dp" />
+    </LinearLayout>
+
+    <!-- PANTALLA 2: INVENTARIO (Ahora en Cuadrícula) -->
+    <FrameLayout
+        android:id="@+id/pantallaInventario"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editBuscarInventario"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="🔍 Buscar en inventario..."
+                android:textColor="#212529"
+                android:textSize="14sp"
+                android:background="#FFFFFF"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:elevation="2dp"
+                android:layout_marginBottom="8dp"
+                android:inputType="text" />
+
+            <!-- Cuadrícula de Inventario (3 columnas) -->
+            <GridView
+                android:id="@+id/gridInventario"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:numColumns="3"
+                android:horizontalSpacing="6dp"
+                android:verticalSpacing="6dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnAgregarFlotante"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="20dp"
+            android:text="+"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:backgroundTint="#2E7D32"
+            android:textColor="#FFFFFF"
+            android:elevation="8dp" />
+    </FrameLayout>
+
+    <!-- PANTALLA 3: GANANCIAS -->
+    <LinearLayout
+        android:id="@+id/pantallaGanancias"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resumen de Ganancias"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#212529"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/txtGananciaEfectivo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💵 Efectivo: $0.00"
+            android:textSize="20sp"
+            android:textColor="#2E7D32"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/txtGananciaTransf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💳 Transferencia: $0.00"
+            android:textSize="20sp"
+            android:textColor="#1565C0"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Historial de Ventas:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#212529"
+            android:layout_marginBottom="8dp" />
+
+        <ListView
+            android:id="@+id/listaHistorial"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="@null"
+            android:dividerHeight="8dp" />
+    </LinearLayout>
+
+</LinearLayout>
