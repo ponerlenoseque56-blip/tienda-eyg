@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1023600443424",
+    "firebase_url": "https://tienda-eyg-1312-default-rtdb.firebaseio.com",
+    "project_id": "tienda-eyg-1312",
+    "storage_bucket": "tienda-eyg-1312.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1023600443424:android:c9b53f624385c1de2bfc45",
+        "android_client_info": {
+          "package_name": "com.example.tiendaeyg"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwvXf4x8xzfgWtFMMmkobZuBn-lSYuRrI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
